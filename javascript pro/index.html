@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Element</title>
+  <style>
+    #textToChange {
+      font-size: 50px;
+      color: black;
+      font-weight: 500;   
+      font-style: 'italic';
+    }
+  </style>
+</head>
+<body>
+  <p id="textToChange">JavaScript is the programming language of the Web. 
+    JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.</p>
+  <button id="changeColorButton">Click me </button>
+  <script>
+    const textToChange = document.getElementById('textToChange');
+    const changeColorButton = document.getElementById('changeColorButton');
+
+    function changeTextColor() {
+      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      textToChange.style.color = randomColor;
+    }
+    changeColorButton.addEventListener('click', changeTextColor);
+  </script>
+</body>
+</html>
+  
